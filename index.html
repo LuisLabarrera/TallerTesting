@@ -2,21 +2,61 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>El Faro</title>
-    <link rel="stylesheet" href="styles.css">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Médica</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body style="text-align: center;">
-    <div>
-        <h1>“El Faro”</h1>
+<body>
+    <div class="container">
+        <h1>Formulario de Ficha Médica</h1>
+        <form id="medical-form">
+            <label for="rut">RUT:</label>
+            <input type="text" id="rut" name="rut" required>
+
+            <label for="nombres">Nombres:</label>
+            <input type="text" id="nombres" name="nombres" required>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+
+            <label for="estadoCivil">Estado Civil:</label>
+            <select id="estadoCivil" name="estadoCivil" required>
+                <option value="">Seleccione...</option>
+                <option value="soltero">Soltero</option>
+                <option value="casado">Casado</option>
+                <option value="viudo">Viudo</option>
+                <option value="divorciado">Divorciado</option>
+            </select>
+
+            <label for="comentarios">Comentarios:</label>
+            <textarea id="comentarios" name="comentarios"></textarea>
+
+            <div class="buttons">
+                <button type="submit">Guardar</button>
+                <button type="reset">Limpiar</button>
+                <button type="button" id="cerrar">Cerrar</button>
+            </div>
+        </form>
+
+        <h2>Buscar por Apellido</h2>
+        <input type="text" id="search" placeholder="Ingrese apellido para buscar...">
+        <ul id="results"></ul>
     </div>
-
-    
-
-    <!-- Resto de tu contenido -->
-
-	<footer>
-        <p>Derechos de autor © 2024 El Faro. Todos los derechos reservados.</p>
-        <p>Contacto: info@elfaro.com</p>
-    </footer>
+    <script src="app.js"></script>
 </body>
 </html>
